@@ -1,6 +1,6 @@
 numpy == 1.9.2
 pandas == 0.16.2
-bokeh == 0.11.1
-Flask == 0.11
+bokeh==0.9.0
+Flask==0.10.1
 Requests == 2.10.0
 gunicorn == 19.3.0
