@@ -25,7 +25,6 @@ def index():
             app.vars["stock_ticker"], app.vars["columns_name"])
         plot = create_graph(final_data, app.vars["columns_name"])
         script, div = components(plot)
-        app.logger.debug(components(plot))
         return render_template('graph.html', script=script, div=div)
 
 

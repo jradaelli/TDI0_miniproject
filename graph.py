@@ -1,7 +1,7 @@
 import pandas as pd
 import requests as req
 import numpy as np
-from bokeh.plotting import figure, output_file
+from bokeh.plotting import figure
 from bokeh.palettes import Spectral11
 
 
@@ -35,5 +35,5 @@ def create_graph(final_data, checkbox_list):
 
     p1.multi_line(xs=[datetime(final_data.index.values)] * numlines,
                   ys=[final_data[name].values for name in final_data], line_color=mypalette, line_width=1)
-    #output_file("templates/stocks.html", title="Stock Analysis")
+    # output_file("templates/stocks.html", title="Stock Analysis")
     return p1
