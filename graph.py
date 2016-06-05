@@ -15,11 +15,6 @@ def get_data(stock='ADI', checkbox_list='Open'):
     final_data = final_data.ix[:, checkbox_list]
     return final_data
 
-
-# final_data = get_data()
-
-# checkbox_list = ['Open', 'Close']
-
 def datetime(x):
     return np.array(x, dtype=np.datetime64)
 
