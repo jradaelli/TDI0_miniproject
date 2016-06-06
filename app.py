@@ -1,8 +1,6 @@
 from flask import Flask, render_template, request, redirect
 from graph import get_data, create_graph
 from bokeh.embed import components
-from bokeh.util.string import encode_utf8
-
 
 app = Flask(__name__)
 
@@ -27,9 +25,8 @@ def index():
             app.vars["stock_ticker"], app.vars["columns_name"])
         plot = create_graph(final_data, app.vars["columns_name"])
         script, div = components(plot)
-        html = render_template('graph.html', script=script, div=div)
-        return encode_utf8(html)
+        return render_template('graph.html', script=script, div=div)
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug='debug')
